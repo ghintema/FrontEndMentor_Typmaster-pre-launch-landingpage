@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Typemaster pre-launch landing page</title>
-  
+
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;700;900&display=swap');
     #background {
@@ -15,6 +15,10 @@
       margin:auto;
       overflow:hidden;
       border:1px solid black;
+      position:relative;
+    }
+    main{
+      margin:0px 24px;
     }
     .topline{
       margin:24px 24px;
@@ -43,7 +47,7 @@
       display:flex;
       flex-flow:row wrap;
       justify-content:start;
-      margin:40px 24px 64px;
+      margin:40px 0px 64px;
       /* border:1px solid red */
     }
     div.hero > h1 {
@@ -55,6 +59,7 @@
       text-transform: uppercase;
       margin-bottom:0px;
       color: #162542;
+      
     }
     p.slogan {
       font-family: 'Barlow';
@@ -88,17 +93,19 @@
       color: #7B8BAD;
       margin:auto 0px auto 32px;
     }
+    .grey1, .grey2 {
+        width:0px;
+      }
     img.keyboard1{
       width:372px;
       height: 331px;
       border-radius:5px;
-      margin-left:24px;
       background: #D8D8D8;
       border-radius: 20px;
     }
     div.framekeyboard2{
       display:inline-block;
-      margin-left:-22px;
+      margin-left:-46px; /* 22px + 24px */
       margin-top:24px;
       width:129px;
       height:193px;
@@ -108,7 +115,7 @@
     img.keyboard2{
       width:129px;
       height:193px;
-      border-radius: 20px;  
+      border-radius: 20px;
       mix-blend-mode:multiply;
       opacity: 0.75;
     }
@@ -116,12 +123,15 @@
       width:220px;
       height:193px;
       border-radius: 20px;
-      margin-left:24px;
+      margin-left:20px;
       margin-top:24px;
     }
-    h2{
+    .mechanical {
+      margin-top:75px;
+    }
+    .mechanical h2{
       width:255px;
-      margin:75px auto 24px;
+      margin:0px auto 24px;
       font-family: 'Barlow';
       font-style: normal;
       font-weight: 900;
@@ -149,7 +159,7 @@
       color: #7B8BAD;
     }
     h3.category{
-      margin:auto 24px 24px;
+      margin:auto auto 24px;
       width:327px;
       font-family: 'Barlow';
       font-style: normal;
@@ -177,59 +187,188 @@
         width:767px;
       }
       .topline{
-      margin:40px 40px;
+      margin:40px 39px 62px;
       }
       button.preorder{
         width:175px;
+        height:58px;
       }
       main{
         display:flex;
         flex-wrap:wrap;
+        margin:39px;
       }
 
       div.hero {
         width:334px;
         align-self:center;
         margin:0px;
-        margin-left:40px;
         margin-right:69px;
-      
+
       }
       div.hero > h1 {
         margin-top:0px;
       }
       div.framekeyboard1 {
-        width:300px;
+        width:280px;
         overflow:visible;
       }
+      
       img.keyboard1 {
         margin:0px;
-        width:478px;
+        width:468px;
         height: 425px;
       }
       div.framekeyboard2{
-      display:bock;
-      margin-left:40px;
-      margin-top:24px;
-      width:214px;
-      height:322px;
-      background: #F16718;
-      border-radius: 20px;
-    }
-    img.keyboard2{
-      width:214px;
-      height:320px;
-      
-    }
-    img.keyboard3{
-      width:445px;
-      height:320px;
-      margin-right:30px;
+        margin:30px 0px 0px 0px;
+        width:214px;
+        height:322px;
+        background: #F16718;
+        border-radius: 20px;
 
-    }
+      }
+      img.keyboard2{
+        width:214px;
+        height:320px;
+      }
+      img.keyboard3{
+        width:445px;
+        height:320px;
+        margin:30px 0px 0px 30px;
 
-    }
+      }
+      .mechanical {
+        display:flex;
+        justify-content: space-between;
+        margin:80px 0px 140px;
+      }
+      .mechanical > h2{
+        margin:0px;
+        text-align:left;
+      }
+      .mechanical > p.description{
+        width:389px;
+        align-self:center;
+        text-align:left;
+      }
 
+      .wrapper{
+        display:flex;
+        flex-wrap:wrap;
+      }
+
+      .tile{
+        width:281px;
+        margin:0px 60px 0px 0px;
+      }
+      .tile > img.icon {
+        margin:0px 0px 40px;
+      }
+      .tile > h3.category {
+        margin:0px 0px 30px;
+        text-align: left;
+      }
+      .tile > p.description {
+        margin:0px 0px 72px;
+        text-align:left;
+      }
+      }
+
+    @media (min-width:1440px) {
+      #background {
+        width:1440px;
+      }
+      .topline{
+      margin:55px 165px 83px;
+      }
+      main {
+        margin:0px 165px;
+      }
+      div.hero {
+        width:455px;
+        align-self:center;
+        margin:0px;
+        margin-right:125px;
+      }
+      div.hero > h1 {
+        font-family: 'Barlow';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 56px;
+        line-height: 56px;
+        text-transform: uppercase;
+        color: #162542;
+      }
+      div.hero > p.slogan {
+        /* Improve your product */
+        font-family: 'Barlow';
+        font-style: normal;
+
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 26px;
+        color: #7B8BAD;
+      }
+      div.framekeyboard1 {
+          width:530px;
+          height:480px;
+          margin-right:0px;
+          overflow:visible;
+      }
+      .grey1 {
+        width:255px;
+        height:240px;
+        position:absolute;
+        top:196px;
+       right:-120px;
+      }
+     .grey2{
+        width:255px;
+        height:236px;
+        position:absolute;
+        top:950px;
+        left:-120px;
+      }
+      img.keyboard1 {
+        margin:0px;
+        width:540px;
+        height: 480px;
+      }
+      div.framekeyboard2{
+        width:255px;
+        height: 480px;
+      }
+      img.keyboard2{
+        width:255px;
+        height: 480px;
+      }
+      img.keyboard3{
+        width:445px;
+        height: 480px;
+      }
+      .mechanical {
+        flex-wrap:wrap;
+        justify-content:center;
+        align-content:center;
+        width:255px;
+        margin:30px 0px 0px 125px;
+      }
+      p.description{
+        text-align: left;
+        margin:15px 0px;
+      }
+      div.wrapper{
+        margin-top:168px;
+      }
+      div.tile {
+        width:255px;
+        margin-right:0px;
+      }
+      div.tile:nth-child(-n+3) { /* first three tiles get margin-right. Last one doesn't get it */
+        margin-right:30px;
+      }
+
+    
 
 
   </style>
@@ -243,15 +382,17 @@
         <button class="preorder">pre-order now</button>
       </div>
     </header>
-    <main>
+    <main>  
+      <img class="grey1" src="assets/shared/pattern-square.svg">
+      <img class="grey2" src="assets/shared/pattern-square.svg">
       <div class="hero">
         <h1>Typmaster Keyboard</h1>
-        <p class="slogan">Improve your productivity and gaming without breaking the bank. Upgrade to a high quality 
+        <p class="slogan">Improve your productivity and gaming without breaking the bank. Upgrade to a high quality
           mechanical typing experience.</p>
         <button class="preorder">pre-order now</button>
         <p class="release">Release on 5/27</p>
       </div>
-      <div class="framekeyboard1">  
+      <div class="framekeyboard1">
         <img class="keyboard1" src="assets/mobile/image-keyboard.jpg" alt="keyboard">
       </div>
       <div class="framekeyboard2">
@@ -260,20 +401,20 @@
       <img class="keyboard3" src="assets/mobile/image-glass-and-keyboard.jpg" alt="keyboard">
       <section class="mechanical" >
         <h2>Mechanical wireless keyboard</h2>
-        <p class="description">The Typemaster keyboard boasts top-notch build and practical design. It offers a wide variety 
+        <p class="description">The Typemaster keyboard boasts top-notch build and practical design. It offers a wide variety
           of switches and keycaps, along with reliable wireless connectivity.</p>
       </section>
       <div class="wrapper">
         <div class="tile">
-          <img class="icon" src="assets/shared/logo.svg"> 
+          <img class="icon" src="assets/shared/logo.svg">
           <h3 class="category">Highly<br>compatible</h3>
-          <p class="description">Easy to use and works well with all major computer brands, gaming consoles and mobile devices. 
+          <p class="description">Easy to use and works well with all major computer brands, gaming consoles and mobile devices.
             Plug & play, no installation or driver needed.</p>
         </div>
         <div class="tile">
           <img class="icon" src="assets/shared/logo.svg" alt="icon bluetooth">
           <h3 class="category">Wireless<br>with bluetooth</h3>
-          <p class="description"> Powerful 2.4G RF technology allows you to connect the cordless keyboard from up to 30ft away. 
+          <p class="description"> Powerful 2.4G RF technology allows you to connect the cordless keyboard from up to 30ft away.
             Simply plug the unifying receiver into your computer.</p>
         </div>
         <div class="tile">
