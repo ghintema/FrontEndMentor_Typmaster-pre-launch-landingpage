@@ -17,7 +17,7 @@
       border:1px solid black;
     }
     .topline{
-      margin:23px 24px;
+      margin:24px 24px;
       display:flex;
       justify-content: space-between;
     }
@@ -53,7 +53,7 @@
       font-size: 48px;
       line-height: 48px;
       text-transform: uppercase;
-
+      margin-bottom:0px;
       color: #162542;
     }
     p.slogan {
@@ -63,11 +63,21 @@
       font-size: 16px;
       line-height: 26px;
       color: #7B8BAD;
+      margin:40px 0px 35px;
     }
     div.hero > button.preorder {
       background: #F16718;
       color: #FFFFFF;
     }
+    div.topline > button.preorder:hover{
+      background: #162542;
+      color:#FFFFFF;
+    }
+    div.hero > button.preorder:hover{
+      background: #FF9B62;
+      border-radius: 8px;
+    }
+
     p.release {
       font-family: 'Barlow';
       font-style: normal;
@@ -86,7 +96,7 @@
       background: #D8D8D8;
       border-radius: 20px;
     }
-    div.veil{
+    div.framekeyboard2{
       display:inline-block;
       margin-left:-22px;
       margin-top:24px;
@@ -124,6 +134,9 @@
     img.icon{
       width:65px;
       height:65px;
+      border-radius: 16px;
+      margin:64px auto 48px;
+      display:block;
     }
     p.description{
       margin:0px 24px;
@@ -147,6 +160,77 @@
       text-transform: uppercase;
       color: #162542;
     }
+    footer{
+      margin-top:96px;
+      font-family: 'Barlow';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      text-align: center;
+      line-height: 26px;
+      line-height: 26px;
+      color: #7B8BAD;
+    }
+
+    @media (min-width:767px) {
+      #background {
+        width:767px;
+      }
+      .topline{
+      margin:40px 40px;
+      }
+      button.preorder{
+        width:175px;
+      }
+      main{
+        display:flex;
+        flex-wrap:wrap;
+      }
+
+      div.hero {
+        width:334px;
+        align-self:center;
+        margin:0px;
+        margin-left:40px;
+        margin-right:69px;
+      
+      }
+      div.hero > h1 {
+        margin-top:0px;
+      }
+      div.framekeyboard1 {
+        width:300px;
+        overflow:visible;
+      }
+      img.keyboard1 {
+        margin:0px;
+        width:478px;
+        height: 425px;
+      }
+      div.framekeyboard2{
+      display:bock;
+      margin-left:40px;
+      margin-top:24px;
+      width:214px;
+      height:322px;
+      background: #F16718;
+      border-radius: 20px;
+    }
+    img.keyboard2{
+      width:214px;
+      height:320px;
+      
+    }
+    img.keyboard3{
+      width:445px;
+      height:320px;
+      margin-right:30px;
+
+    }
+
+    }
+
+
 
   </style>
 
@@ -167,8 +251,10 @@
         <button class="preorder">pre-order now</button>
         <p class="release">Release on 5/27</p>
       </div>
-      <img class="keyboard1" src="assets/mobile/image-keyboard.jpg" alt="keyboard">
-      <div class="veil">
+      <div class="framekeyboard1">  
+        <img class="keyboard1" src="assets/mobile/image-keyboard.jpg" alt="keyboard">
+      </div>
+      <div class="framekeyboard2">
         <img class="keyboard2" src="assets/mobile/image-phone-and-keyboard.jpg" alt="keyboard">
       </div>
       <img class="keyboard3" src="assets/mobile/image-glass-and-keyboard.jpg" alt="keyboard">
@@ -179,25 +265,25 @@
       </section>
       <div class="wrapper">
         <div class="tile">
-          <img class="icon" src="assets/shared/icon-compatible.svg"> 
+          <img class="icon" src="assets/shared/logo.svg"> 
           <h3 class="category">Highly<br>compatible</h3>
           <p class="description">Easy to use and works well with all major computer brands, gaming consoles and mobile devices. 
             Plug & play, no installation or driver needed.</p>
         </div>
         <div class="tile">
-          <img class="icon" src="assets/shared/icon-bluetooth.svg" alt="icon bluetooth">
+          <img class="icon" src="assets/shared/logo.svg" alt="icon bluetooth">
           <h3 class="category">Wireless<br>with bluetooth</h3>
           <p class="description"> Powerful 2.4G RF technology allows you to connect the cordless keyboard from up to 30ft away. 
             Simply plug the unifying receiver into your computer.</p>
         </div>
         <div class="tile">
-          <img class="icon" src="assets/shared/icon-battery.svg" alt="icon battery">
+          <img class="icon" src="assets/shared/logo.svg" alt="icon battery">
           <h3 class="category">High capacity<br>battery</h3>
           <p class="description">Equipped with a long-lasting built-in battery, you’ll never have to spend a dime on replaceable ones. 
             Enjoy 40 hours of usage time between charges.</p>
         </div>
         <div class="tile">
-          <img class="icon" src="assets/shared/icon-light.svg" alt="icon bulb">
+          <img class="icon" src="assets/shared/logo.svg" alt="icon bulb">
           <h3 class="category">RGB backlit<br> modes</h3>
           <p class="description">Choose from 4 backlight brightness levels and adjustable breathing speed. Each key glows intensely in the dark and helps
             you type in low light conditions.</p>
@@ -210,8 +296,4 @@
   </div>
 </body>
 </html>
-
-
-
-
 
